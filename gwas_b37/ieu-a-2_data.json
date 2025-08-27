@@ -1,0 +1,19 @@
+{
+  "id": "ieu-a-2",
+  "build": "HG19/GRCh37",
+  "chr_col": 10,
+  "snp_col": 0,
+  "pos_col": 11,
+  "ea_col": 1,
+  "oa_col": 2,
+  "eaf_col": 6,
+  "beta_col": 3,
+  "se_col": 4,
+  "pval_col": 5,
+  "ncontrol_col": 7,
+  "delimiter": " ",
+  "header": true,
+  "jsonmeta": "/mnt/storage/private/mrcieu/research/scratch/IGD/data/dev/ieu-a-import/ready/ieu-a-2.json",
+  "data": "/mnt/storage/private/mrcieu/research/scratch/IGD/data/dev/ieu-a-import/processed/ieu-a-2/All_ancestries_SNP_gwas_mc_merge_nogc.tbl.uniq.gz.tab.gz",
+  "out": "/mnt/storage/private/mrcieu/research/scratch/IGD/data/dev/ieu-a-import/processed/ieu-a-2/ieu-a-2_data.vcf.gz"
+}

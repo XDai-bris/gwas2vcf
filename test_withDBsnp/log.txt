@@ -1,0 +1,26 @@
+(gwas2vcf-py37) [xd14188@compute083(BlueCrystal4) test_withDBsnp]$ sh scr.sh 
+usage: main.py [-h] [-v] [--out OUT] [--data DATA] --ref REF [--dbsnp DBSNP]
+               --json JSON [--id ID] [--cohort_controls COHORT_CONTROLS]
+               [--cohort_cases COHORT_CASES] [--csi]
+               [--log {DEBUG,INFO,WARNING,ERROR,CRITICAL}] [--alias ALIAS]
+main.py: error: unrecognized arguments:  
+scr.sh: line 17: --out: command not found
+(gwas2vcf-py37) [xd14188@compute083(BlueCrystal4) test_withDBsnp]$ sh scr.sh 
+2025-08-20 12:23:43,922 INFO Gwas2VCF 1.4.3
+2025-08-20 12:23:43,922 INFO Arguments: {'out': '/user/home/xd14188/repo/gwas2vcf/test/test_withDBsnp/test.vcf.gz', 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b37/All_ancestries_SNP_gwas_mc_merge_nogc.tbl.uniq.gz.tab.gz', 'ref': '/user/home/xd14188/repo/gwas2vcf/test/ref/human_g1k_v37.fasta', 'dbsnp': '/user/home/xd14188/repo/gwas2vcf/test/ref/dbsnp.v153.b37.vcf.gz', 'json': '/user/home/xd14188/repo/gwas2vcf/test/test_withDBsnp/test_param.json', 'id': 'test_withDBsnp', 'cohort_controls': None, 'cohort_cases': None, 'csi': False, 'log': 'INFO', 'alias': '/user/home/xd14188/repo/gwas2vcf/test/ref/alias-b37.txt'}
+2025-08-20 12:23:43,923 INFO Reading JSON parameters
+2025-08-20 12:23:43,924 INFO Parameters: {'beta_col': 3, 'chr_col': 10, 'jsonmeta': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b37/ieu-a-2.json', 'out': '/user/home/xd14188/repo/gwas2vcf/test/test_withDBsnp/test.vcf.gz', 'id': 'test', 'se_col': 4, 'pval_col': 5, 'pos_col': 11, 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b37/All_ancestries_SNP_gwas_mc_merge_nogc.tbl.uniq.gz.tab.gz', 'eaf_col': 6, 'ea_col': 1, 'snp_col': 0, 'ncontrol_col': 7, 'header': True, 'delimiter': ' ', 'build': 'HG19/GRCh37', 'oa_col': 2}
+2025-08-20 12:23:43,924 INFO Checking input arguments
+2025-08-20 12:23:44,179 INFO Reading summary stats and mapping to FASTA: /user/home/xd14188/repo/gwas2vcf/test/gwas_b37/All_ancestries_SNP_gwas_mc_merge_nogc.tbl.uniq.gz.tab.gz
+2025-08-20 12:23:44,179 INFO Reading gzip file
+2025-08-20 12:23:44,221 INFO Skipping header: ID ALT REF BETA SE PVALUE AF N ZVALUE INFO CHROM POS
+2025-08-20 13:10:10,071 INFO Total variants: 2554285
+2025-08-20 13:10:10,071 INFO Variants could not be read: 0
+2025-08-20 13:10:10,071 INFO Variants harmonised: 2554285
+2025-08-20 13:10:10,071 INFO Variants discarded during harmonisation: 0
+2025-08-20 13:10:10,071 INFO Alleles switched: 0
+2025-08-20 13:10:10,071 INFO Normalised variants: 0
+2025-08-20 13:10:10,071 INFO Skipped 0 of 2554285
+2025-08-20 13:10:10,193 INFO Writing headers to BCF/VCF: /user/home/xd14188/repo/gwas2vcf/test/test_withDBsnp/test.vcf.gz
+2025-08-20 13:10:10,218 INFO Writing variants to BCF/VCF: /user/home/xd14188/repo/gwas2vcf/test/test_withDBsnp/test.vcf.gz
+2025-08-20 13:13:37,223 INFO Indexing output file

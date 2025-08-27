@@ -1,0 +1,735 @@
+2025-08-27 12:59:50,076 INFO Gwas2VCF 1.4.3
+2025-08-27 12:59:50,076 INFO Arguments: {'out': '/user/home/xd14188/repo/gwas2vcf/test/test_v38_withDBsnp/test.vcf.gz', 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b38/first100.tsv.gz', 'ref': '/user/home/xd14188/repo/gwas2vcf/test/ref/hg38.fa', 'dbsnp': '/user/home/xd14188/repo/gwas2vcf/test/ref/dbsnp.v153.hg38.numeric.vcf.gz', 'json': '/user/home/xd14188/repo/gwas2vcf/test/test_v38_withDBsnp/test_param.json', 'id': 'test_v38_withDBsnp', 'cohort_controls': None, 'cohort_cases': None, 'csi': False, 'log': 'DEBUG', 'alias': None}
+2025-08-27 12:59:50,076 INFO Reading JSON parameters
+2025-08-27 12:59:50,077 INFO Parameters: {'eaf_col': 10, 'build': 'GRCh38', 'out': '/user/home/xd14188/repo/gwas2vcf/test_v38_withDBsnp/test.vcf.gz', 'pval_col': 20, 'header': True, 'delimiter': '\t', 'ea_col': 5, 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b38/first100.tsv.gz', 'pos_col': 3, 'chr_col': 2, 'se_col': 19, 'id': 'test', 'snp_col': 1, 'beta_col': 6, 'oa_col': 4}
+2025-08-27 12:59:50,077 INFO Checking input arguments
+2025-08-27 12:59:50,184 INFO Reading summary stats and mapping to FASTA: /user/home/xd14188/repo/gwas2vcf/test/gwas_b38/first100.tsv.gz
+2025-08-27 12:59:50,184 DEBUG File path: /user/home/xd14188/repo/gwas2vcf/test/gwas_b38/first100.tsv.gz
+2025-08-27 12:59:50,184 DEBUG CHR field: 2
+2025-08-27 12:59:50,184 DEBUG POS field: 3
+2025-08-27 12:59:50,184 DEBUG EA field: 5
+2025-08-27 12:59:50,184 DEBUG NEA field: 4
+2025-08-27 12:59:50,184 DEBUG Effect field: 6
+2025-08-27 12:59:50,184 DEBUG SE field: 19
+2025-08-27 12:59:50,184 DEBUG P fields: 20
+2025-08-27 12:59:50,184 DEBUG Delimiter: 	
+2025-08-27 12:59:50,184 DEBUG Header: True
+2025-08-27 12:59:50,184 DEBUG ncase Field: None
+2025-08-27 12:59:50,184 DEBUG dbsnp Field: 1
+2025-08-27 12:59:50,184 DEBUG EA AF Field: 10
+2025-08-27 12:59:50,184 DEBUG NEA AF Field: None
+2025-08-27 12:59:50,184 DEBUG IMP Z Score Field: None
+2025-08-27 12:59:50,184 DEBUG IMP INFO Field: None
+2025-08-27 12:59:50,184 DEBUG N Control Field: None
+2025-08-27 12:59:50,184 INFO Reading gzip file
+2025-08-27 12:59:50,185 INFO Skipping header: hm_variant_id	hm_rsid	hm_chrom	hm_pos	hm_other_allele	hm_effect_allele	hm_beta	hm_odds_ratio	hm_ci_lower	hm_ci_upper	hm_effect_allele_frequency	hm_code	variant_id	chromosome	base_pair_location	effect_allele	other_allele	effect_allele_frequency	beta	standard_error	p_value	n	odds_ratio	ci_lower	ci_upper
+2025-08-27 12:59:50,185 DEBUG Input row: ['1_49298_T_C', 'rs10399793', '1', '49298', 'T', 'C', '-0.000795562', 'NA', 'NA', 'NA', '0.623779', '11', 'rs10399793', '1', '49298', 'T', 'C', '0.376221', '0.000795562', '0.00338618', '8.8E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,185 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,185 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,185 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,185 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,185 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,186 DEBUG Extracted row: {'chrom': '1', 'pos': 49298, 'ref': 'T', 'alt': 'C', 'b': -0.000795562, 'se': 0.00338618, 'nlog_pval': 0.0555173278, 'alt_freq': 0.623779, 'n': None, 'dbsnpid': 'rs10399793', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,186 DEBUG Input row: ['1_54676_C_T', 'rs2462492', '1', '54676', 'C', 'T', '0.00134784', 'NA', 'NA', 'NA', '0.40059500000000003', '11', 'rs2462492', '1', '54676', 'C', 'T', '0.599405', '-0.00134784', '0.00335445', '6.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,186 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,186 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,186 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,186 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,186 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,186 DEBUG Extracted row: {'chrom': '1', 'pos': 54676, 'ref': 'C', 'alt': 'T', 'b': 0.00134784, 'se': 0.00335445, 'nlog_pval': 0.22184875, 'alt_freq': 0.40059500000000003, 'n': None, 'dbsnpid': 'rs2462492', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,187 DEBUG Input row: ['1_55326_T_C', 'rs3107975', '1', '55326', 'T', 'C', '0.00952623', 'NA', 'NA', 'NA', '0.008445000000000036', '11', 'rs3107975', '1', '55326', 'T', 'C', '0.991555', '-0.00952623', '0.0186906', '5.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,187 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,187 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,187 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,187 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,187 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,187 DEBUG Extracted row: {'chrom': '1', 'pos': 55326, 'ref': 'T', 'alt': 'C', 'b': 0.00952623, 'se': 0.0186906, 'nlog_pval': 0.283996656, 'alt_freq': 0.008445000000000036, 'n': None, 'dbsnpid': 'rs3107975', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,187 DEBUG Input row: ['1_79033_A_G', 'rs2462495', '1', '79033', 'A', 'G', '-0.013031', 'NA', 'NA', 'NA', '0.99870862', '11', 'rs2462495', '1', '79033', 'A', 'G', '0.00129138', '0.013031', '0.0430239', '7.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,188 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,188 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,188 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,188 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,188 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,188 DEBUG Extracted row: {'chrom': '1', 'pos': 79033, 'ref': 'A', 'alt': 'G', 'b': -0.013031, 'se': 0.0430239, 'nlog_pval': 0.113509275, 'alt_freq': 0.99870862, 'n': None, 'dbsnpid': 'rs2462495', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,189 DEBUG Input row: ['1_86028_T_C', 'rs114608975', '1', '86028', 'T', 'C', '0.0048444', 'NA', 'NA', 'NA', '0.10360899999999995', '11', 'rs114608975', '1', '86028', 'T', 'C', '0.896391', '-0.0048444', '0.00536184', '3.4E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,189 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,189 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,189 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,189 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,189 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,189 DEBUG Extracted row: {'chrom': '1', 'pos': 86028, 'ref': 'T', 'alt': 'C', 'b': 0.0048444, 'se': 0.00536184, 'nlog_pval': 0.468521083, 'alt_freq': 0.10360899999999995, 'n': None, 'dbsnpid': 'rs114608975', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,190 DEBUG Input row: ['1_91536_G_T', 'rs6702460', '1', '91536', 'G', 'T', '0.00362645', 'NA', 'NA', 'NA', '0.45697299999999996', '11', 'rs6702460', '1', '91536', 'G', 'T', '0.543027', '-0.00362645', '0.00330317', '2.9E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,190 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,190 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,190 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,190 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,190 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,190 DEBUG Extracted row: {'chrom': '1', 'pos': 91536, 'ref': 'G', 'alt': 'T', 'b': 0.00362645, 'se': 0.00330317, 'nlog_pval': 0.537602002, 'alt_freq': 0.45697299999999996, 'n': None, 'dbsnpid': 'rs6702460', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,191 DEBUG Input row: ['1_264562_C_T', 'rs8179466', '1', '264562', 'C', 'T', '-0.00688879', 'NA', 'NA', 'NA', '0.07450900000000005', '11', 'rs8179466', '1', '264562', 'C', 'T', '0.925491', '0.00688879', '0.00651278', '4.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,191 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,191 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,191 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,191 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,191 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,192 DEBUG Extracted row: {'chrom': '1', 'pos': 264562, 'ref': 'C', 'alt': 'T', 'b': -0.00688879, 'se': 0.00651278, 'nlog_pval': 0.397940009, 'alt_freq': 0.07450900000000005, 'n': None, 'dbsnpid': 'rs8179466', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,192 DEBUG Input row: ['1_591356_C_G', 'rs28863004', '1', '591356', 'C', 'G', '-0.0277783', 'NA', 'NA', 'NA', '0.006032999999999955', '6', 'rs28863004', '1', '591356', 'C', 'G', '0.993967', '0.0277783', '0.0218402', '1.5E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,192 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,192 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,192 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,192 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,192 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,192 DEBUG Extracted row: {'chrom': '1', 'pos': 591356, 'ref': 'C', 'alt': 'G', 'b': -0.0277783, 'se': 0.0218402, 'nlog_pval': 0.823908741, 'alt_freq': 0.006032999999999955, 'n': None, 'dbsnpid': 'rs28863004', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,192 DEBUG Input row: ['1_597818_C_T', 'rs78497331', '1', '597818', 'C', 'T', '0.0694379', 'NA', 'NA', 'NA', '0.0010179999999999634', '11', 'rs78497331', '1', '597818', 'C', 'T', '0.998982', '-0.0694379', '0.0516586', '2.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,193 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,193 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,193 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,193 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,193 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,193 DEBUG Extracted row: {'chrom': '1', 'pos': 597818, 'ref': 'C', 'alt': 'T', 'b': 0.0694379, 'se': 0.0516586, 'nlog_pval': 0.568636236, 'alt_freq': 0.0010179999999999634, 'n': None, 'dbsnpid': 'rs78497331', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,194 DEBUG Input row: ['1_598812_C_T', 'rs6680723', '1', '598812', 'C', 'T', '-0.000721731', 'NA', 'NA', 'NA', '0.24100100000000002', '11', 'rs6680723', '1', '598812', 'C', 'T', '0.758999', '0.000721731', '0.00377299', '9.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,194 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,194 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,194 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,194 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,194 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,194 DEBUG Extracted row: {'chrom': '1', 'pos': 598812, 'ref': 'C', 'alt': 'T', 'b': -0.000721731, 'se': 0.00377299, 'nlog_pval': 0.0409586077, 'alt_freq': 0.24100100000000002, 'n': None, 'dbsnpid': 'rs6680723', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,195 DEBUG Input row: ['1_599203_C_G', 'rs6683466', '1', '599203', 'C', 'G', '0.0706019', 'NA', 'NA', 'NA', '0.006696999999999953', '6', 'rs6683466', '1', '599203', 'C', 'G', '0.993303', '-0.0706019', '0.0213429', '1.4E-03', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,195 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,195 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,195 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,195 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,195 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,195 DEBUG Extracted row: {'chrom': '1', 'pos': 599203, 'ref': 'C', 'alt': 'G', 'b': 0.0706019, 'se': 0.0213429, 'nlog_pval': 2.85387196, 'alt_freq': 0.006696999999999953, 'n': None, 'dbsnpid': 'rs6683466', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,196 DEBUG Input row: ['1_609204_C_T', 'rs576404767', '1', '609204', 'C', 'T', '-0.0341719', 'NA', 'NA', 'NA', '0.0018899999999999473', '11', 'rs576404767', '1', '609204', 'C', 'T', '0.99811', '0.0341719', '0.0306233', '2.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,196 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,196 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,196 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,197 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,197 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,197 DEBUG Extracted row: {'chrom': '1', 'pos': 609204, 'ref': 'C', 'alt': 'T', 'b': -0.0341719, 'se': 0.0306233, 'nlog_pval': 0.657577319, 'alt_freq': 0.0018899999999999473, 'n': None, 'dbsnpid': 'rs576404767', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,197 DEBUG Input row: ['1_611317_A_G', 'rs12025928', '1', '611317', 'A', 'G', '0.000238071', 'NA', 'NA', 'NA', '0.913403', '11', 'rs12025928', '1', '611317', 'A', 'G', '0.086597', '-0.000238071', '0.00470481', '9.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,197 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,197 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,197 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,197 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,197 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,197 DEBUG Extracted row: {'chrom': '1', 'pos': 611317, 'ref': 'A', 'alt': 'G', 'b': 0.000238071, 'se': 0.00470481, 'nlog_pval': 0.017728767, 'alt_freq': 0.913403, 'n': None, 'dbsnpid': 'rs12025928', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,198 DEBUG Input row: ['1_629482_T_C', 'rs1988726', '1', '629482', 'T', 'C', '0.00400403', 'NA', 'NA', 'NA', '0.0013100000000000334', '11', 'rs1988726', '1', '629482', 'T', 'C', '0.99869', '-0.00400403', '0.046446', '8.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,198 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,198 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,198 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,198 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,198 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,198 DEBUG Extracted row: {'chrom': '1', 'pos': 629482, 'ref': 'T', 'alt': 'C', 'b': 0.00400403, 'se': 0.046446, 'nlog_pval': 0.0915149811, 'alt_freq': 0.0013100000000000334, 'n': None, 'dbsnpid': 'rs1988726', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,199 DEBUG Input row: ['1_629731_T_C', 'rs573042692', '1', '629731', 'T', 'C', '0.0174724', 'NA', 'NA', 'NA', '0.001603000000000021', '11', 'rs573042692', '1', '629731', 'T', 'C', '0.998397', '-0.0174724', '0.0365218', '7.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,199 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,199 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,199 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,199 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,199 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,199 DEBUG Extracted row: {'chrom': '1', 'pos': 629731, 'ref': 'T', 'alt': 'C', 'b': 0.0174724, 'se': 0.0365218, 'nlog_pval': 0.142667504, 'alt_freq': 0.001603000000000021, 'n': None, 'dbsnpid': 'rs573042692', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,199 DEBUG Input row: ['1_629750_G_A', 'rs371431021', '1', '629750', 'G', 'A', '-0.0258817', 'NA', 'NA', 'NA', '0.0045239999999999725', '11', 'rs371431021', '1', '629750', 'G', 'A', '0.995476', '0.0258817', '0.0236044', '3.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,199 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,199 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,200 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,200 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,200 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,200 DEBUG Extracted row: {'chrom': '1', 'pos': 629750, 'ref': 'G', 'alt': 'A', 'b': -0.0258817, 'se': 0.0236044, 'nlog_pval': 0.522878745, 'alt_freq': 0.0045239999999999725, 'n': None, 'dbsnpid': 'rs371431021', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,200 DEBUG Input row: ['1_629816_T_C', 'rs538567606', '1', '629816', 'T', 'C', '0.00315236', 'NA', 'NA', 'NA', '0.0023079999999999767', '11', 'rs538567606', '1', '629816', 'T', 'C', '0.997692', '-0.00315236', '0.0325405', '9.5E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,200 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,200 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,200 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,200 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,200 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,200 DEBUG Extracted row: {'chrom': '1', 'pos': 629816, 'ref': 'T', 'alt': 'C', 'b': 0.00315236, 'se': 0.0325405, 'nlog_pval': 0.0222763947, 'alt_freq': 0.0023079999999999767, 'n': None, 'dbsnpid': 'rs538567606', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,201 DEBUG Input row: ['1_630089_C_T', 'rs554127336', '1', '630089', 'C', 'T', '0.044806', 'NA', 'NA', 'NA', '0.0014340000000000463', '11', 'rs554127336', '1', '630089', 'C', 'T', '0.998566', '-0.044806', '0.0441698', '2.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,201 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,201 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,201 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,201 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,201 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,201 DEBUG Extracted row: {'chrom': '1', 'pos': 630089, 'ref': 'C', 'alt': 'T', 'b': 0.044806, 'se': 0.0441698, 'nlog_pval': 0.568636236, 'alt_freq': 0.0014340000000000463, 'n': None, 'dbsnpid': 'rs554127336', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,202 DEBUG Input row: ['1_630110_T_C', 'rs7349153', '1', '630110', 'T', 'C', '0.0249589', 'NA', 'NA', 'NA', '0.0013570000000000526', '11', 'rs7349153', '1', '630110', 'T', 'C', '0.998643', '-0.0249589', '0.0466598', '5.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,202 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,202 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,202 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,202 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,202 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,202 DEBUG Extracted row: {'chrom': '1', 'pos': 630110, 'ref': 'T', 'alt': 'C', 'b': 0.0249589, 'se': 0.0466598, 'nlog_pval': 0.244125144, 'alt_freq': 0.0013570000000000526, 'n': None, 'dbsnpid': 'rs7349153', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,203 DEBUG Input row: ['1_630490_T_C', 'rs9326619', '1', '630490', 'T', 'C', '0.00692395', 'NA', 'NA', 'NA', '0.0015079999999999538', '11', 'rs9326619', '1', '630490', 'T', 'C', '0.998492', '-0.00692395', '0.0447936', '8.5E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,203 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,203 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,203 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,203 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,203 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,203 DEBUG Extracted row: {'chrom': '1', 'pos': 630490, 'ref': 'T', 'alt': 'C', 'b': 0.00692395, 'se': 0.0447936, 'nlog_pval': 0.0705810743, 'alt_freq': 0.0015079999999999538, 'n': None, 'dbsnpid': 'rs9326619', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,204 DEBUG Input row: ['1_630644_G_A', 'rs6421779', '1', '630644', 'G', 'A', '0.00225326', 'NA', 'NA', 'NA', '0.0012929999999999886', '11', 'rs6421779', '1', '630644', 'G', 'A', '0.998707', '-0.00225326', '0.046641', '8.5E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,204 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,204 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,204 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,204 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,204 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,204 DEBUG Extracted row: {'chrom': '1', 'pos': 630644, 'ref': 'G', 'alt': 'A', 'b': 0.00225326, 'se': 0.046641, 'nlog_pval': 0.0705810743, 'alt_freq': 0.0012929999999999886, 'n': None, 'dbsnpid': 'rs6421779', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,205 DEBUG Input row: ['1_630991_A_G', 'rs1832731', '1', '630991', 'A', 'G', '0.0291499', 'NA', 'NA', 'NA', '0.0014809999999999546', '11', 'rs1832731', '1', '630991', 'A', 'G', '0.998519', '-0.0291499', '0.0461072', '4.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,205 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,205 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,205 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,205 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,205 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,205 DEBUG Extracted row: {'chrom': '1', 'pos': 630991, 'ref': 'A', 'alt': 'G', 'b': 0.0291499, 'se': 0.0461072, 'nlog_pval': 0.327902142, 'alt_freq': 0.0014809999999999546, 'n': None, 'dbsnpid': 'rs1832731', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,206 DEBUG Input row: ['1_631412_T_C', 'rs9283152', '1', '631412', 'T', 'C', '0.0275351', 'NA', 'NA', 'NA', '0.002130999999999994', '11', 'rs9283152', '1', '631412', 'T', 'C', '0.997869', '-0.0275351', '0.039351', '4.8E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,206 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,206 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,206 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,206 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,206 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,206 DEBUG Extracted row: {'chrom': '1', 'pos': 631412, 'ref': 'T', 'alt': 'C', 'b': 0.0275351, 'se': 0.039351, 'nlog_pval': 0.318758763, 'alt_freq': 0.002130999999999994, 'n': None, 'dbsnpid': 'rs9283152', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,207 DEBUG Input row: ['1_631553_A_G', 'rs113120793', '1', '631553', 'A', 'G', '0.019303', 'NA', 'NA', 'NA', '0.0013039999999999718', '11', 'rs113120793', '1', '631553', 'A', 'G', '0.998696', '-0.019303', '0.0476103', '6.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,207 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,207 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,207 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,207 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,207 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,207 DEBUG Extracted row: {'chrom': '1', 'pos': 631553, 'ref': 'A', 'alt': 'G', 'b': 0.019303, 'se': 0.0476103, 'nlog_pval': 0.22184875, 'alt_freq': 0.0013039999999999718, 'n': None, 'dbsnpid': 'rs113120793', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,208 DEBUG Input row: ['1_631580_T_C', 'rs2185540', '1', '631580', 'T', 'C', '0.0166072', 'NA', 'NA', 'NA', '0.0013929999999999776', '11', 'rs2185540', '1', '631580', 'T', 'C', '0.998607', '-0.0166072', '0.0471774', '6.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,208 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,208 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,208 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,208 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,208 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,208 DEBUG Extracted row: {'chrom': '1', 'pos': 631580, 'ref': 'T', 'alt': 'C', 'b': 0.0166072, 'se': 0.0471774, 'nlog_pval': 0.173925197, 'alt_freq': 0.0013929999999999776, 'n': None, 'dbsnpid': 'rs2185540', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,209 DEBUG Input row: ['1_631626_G_T', 'rs565235853', '1', '631626', 'G', 'T', '0.0239694', 'NA', 'NA', 'NA', '0.003021999999999969', '11', 'rs565235853', '1', '631626', 'G', 'T', '0.996978', '-0.0239694', '0.021107', '3.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,209 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,209 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,209 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,209 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,209 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,209 DEBUG Extracted row: {'chrom': '1', 'pos': 631626, 'ref': 'G', 'alt': 'T', 'b': 0.0239694, 'se': 0.021107, 'nlog_pval': 0.522878745, 'alt_freq': 0.003021999999999969, 'n': None, 'dbsnpid': 'rs565235853', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,210 DEBUG Input row: ['1_632487_A_G', 'rs2000096', '1', '632487', 'A', 'G', '0.00926714', 'NA', 'NA', 'NA', '0.0030449999999999644', '11', 'rs2000096', '1', '632487', 'A', 'G', '0.996955', '-0.00926714', '0.0304849', '7.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,210 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,210 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,210 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,210 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,210 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,210 DEBUG Extracted row: {'chrom': '1', 'pos': 632487, 'ref': 'A', 'alt': 'G', 'b': 0.00926714, 'se': 0.0304849, 'nlog_pval': 0.119186408, 'alt_freq': 0.0030449999999999644, 'n': None, 'dbsnpid': 'rs2000096', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,211 DEBUG Input row: ['1_632692_A_G', 'rs2853820', '1', '632692', 'A', 'G', '0.023805', 'NA', 'NA', 'NA', '0.0015239999999999698', '11', 'rs2853820', '1', '632692', 'A', 'G', '0.998476', '-0.023805', '0.0427568', '4.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,211 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,211 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,211 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,211 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,211 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,211 DEBUG Extracted row: {'chrom': '1', 'pos': 632692, 'ref': 'A', 'alt': 'G', 'b': 0.023805, 'se': 0.0427568, 'nlog_pval': 0.327902142, 'alt_freq': 0.0015239999999999698, 'n': None, 'dbsnpid': 'rs2853820', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,212 DEBUG Input row: ['1_633420_G_A', 'rs375217967', '1', '633420', 'G', 'A', '0.0138276', 'NA', 'NA', 'NA', '0.016927000000000025', '11', 'rs375217967', '1', '633420', 'G', 'A', '0.983073', '-0.0138276', '0.0128963', '3.3E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,212 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,212 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,213 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,213 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,213 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,213 DEBUG Extracted row: {'chrom': '1', 'pos': 633420, 'ref': 'G', 'alt': 'A', 'b': 0.0138276, 'se': 0.0128963, 'nlog_pval': 0.48148606, 'alt_freq': 0.016927000000000025, 'n': None, 'dbsnpid': 'rs375217967', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,214 DEBUG Input row: ['1_633824_T_C', 'rs112660509', '1', '633824', 'T', 'C', '0.022917', 'NA', 'NA', 'NA', '0.0018569999999999975', '11', 'rs112660509', '1', '633824', 'T', 'C', '0.998143', '-0.022917', '0.0427233', '5.3E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,214 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,214 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,214 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,214 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,214 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,214 DEBUG Extracted row: {'chrom': '1', 'pos': 633824, 'ref': 'T', 'alt': 'C', 'b': 0.022917, 'se': 0.0427233, 'nlog_pval': 0.27572413, 'alt_freq': 0.0018569999999999975, 'n': None, 'dbsnpid': 'rs112660509', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,215 DEBUG Input row: ['1_634163_G_A', 'rs538153094', '1', '634163', 'G', 'A', '0.0459203', 'NA', 'NA', 'NA', '0.0015500000000000513', '11', 'rs538153094', '1', '634163', 'G', 'A', '0.99845', '-0.0459203', '0.0442119', '2.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,215 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,215 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,215 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,215 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,215 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,215 DEBUG Extracted row: {'chrom': '1', 'pos': 634163, 'ref': 'G', 'alt': 'A', 'b': 0.0459203, 'se': 0.0442119, 'nlog_pval': 0.585026652, 'alt_freq': 0.0015500000000000513, 'n': None, 'dbsnpid': 'rs538153094', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,217 DEBUG Input row: ['1_634224_G_A', 'rs9645429', '1', '634224', 'G', 'A', '-0.0691764', 'NA', 'NA', 'NA', '0.0016800000000000148', '11', 'rs9645429', '1', '634224', 'G', 'A', '0.99832', '0.0691764', '0.0380361', '5.4E-02', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,217 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,217 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,217 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,217 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,217 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,217 DEBUG Extracted row: {'chrom': '1', 'pos': 634224, 'ref': 'G', 'alt': 'A', 'b': -0.0691764, 'se': 0.0380361, 'nlog_pval': 1.26760624, 'alt_freq': 0.0016800000000000148, 'n': None, 'dbsnpid': 'rs9645429', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,218 DEBUG Input row: ['1_634244_T_C', 'rs6594035', '1', '634244', 'T', 'C', '0.00933645', 'NA', 'NA', 'NA', '0.008221999999999952', '11', 'rs6594035', '1', '634244', 'T', 'C', '0.991778', '-0.00933645', '0.0205835', '6.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,218 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,218 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,218 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,218 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,218 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,219 DEBUG Extracted row: {'chrom': '1', 'pos': 634244, 'ref': 'T', 'alt': 'C', 'b': 0.00933645, 'se': 0.0205835, 'nlog_pval': 0.22184875, 'alt_freq': 0.008221999999999952, 'n': None, 'dbsnpid': 'rs6594035', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,220 DEBUG Input row: ['1_634696_T_C', 'rs9326625', '1', '634696', 'T', 'C', '0.113619', 'NA', 'NA', 'NA', '0.0010930000000000106', '11', 'rs9326625', '1', '634696', 'T', 'C', '0.998907', '-0.113619', '0.0613926', '6.7E-02', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,220 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,220 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,220 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,220 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,220 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,220 DEBUG Extracted row: {'chrom': '1', 'pos': 634696, 'ref': 'T', 'alt': 'C', 'b': 0.113619, 'se': 0.0613926, 'nlog_pval': 1.1739252, 'alt_freq': 0.0010930000000000106, 'n': None, 'dbsnpid': 'rs9326625', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,221 DEBUG Input row: ['1_634781_G_A', 'rs572999760', '1', '634781', 'G', 'A', '0.0264594', 'NA', 'NA', 'NA', '0.00119899999999995', '11', 'rs572999760', '1', '634781', 'G', 'A', '0.998801', '-0.0264594', '0.0497714', '4.8E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,221 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,222 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,222 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,222 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,222 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,222 DEBUG Extracted row: {'chrom': '1', 'pos': 634781, 'ref': 'G', 'alt': 'A', 'b': 0.0264594, 'se': 0.0497714, 'nlog_pval': 0.318758763, 'alt_freq': 0.00119899999999995, 'n': None, 'dbsnpid': 'rs572999760', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,223 DEBUG Input row: ['1_758351_A_G', 'rs12238997', '1', '758351', 'A', 'G', '-0.0014921', 'NA', 'NA', 'NA', '0.11616700000000002', '11', 'rs12238997', '1', '758351', 'A', 'G', '0.883833', '0.0014921', '0.00316456', '5.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,223 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,223 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,223 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,223 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,223 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,223 DEBUG Extracted row: {'chrom': '1', 'pos': 758351, 'ref': 'A', 'alt': 'G', 'b': -0.0014921, 'se': 0.00316456, 'nlog_pval': 0.244125144, 'alt_freq': 0.11616700000000002, 'n': None, 'dbsnpid': 'rs12238997', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,224 DEBUG Input row: ['1_770502_G_A', 'rs72631875', '1', '770502', 'G', 'A', '0.00154096', 'NA', 'NA', 'NA', '0.06728800000000001', '11', 'rs72631875', '1', '770502', 'G', 'A', '0.932712', '-0.00154096', '0.00463341', '7.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,224 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,224 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,224 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,224 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,224 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,224 DEBUG Extracted row: {'chrom': '1', 'pos': 770502, 'ref': 'G', 'alt': 'A', 'b': 0.00154096, 'se': 0.00463341, 'nlog_pval': 0.148741651, 'alt_freq': 0.06728800000000001, 'n': None, 'dbsnpid': 'rs72631875', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,224 DEBUG Input row: ['1_770562_A_T', 'rs544671234', '1', '770562', 'A', 'T', '-0.015562', 'NA', 'NA', 'NA', '0.003359000000000001', '6', 'rs544671234', '1', '770562', 'A', 'T', '0.996641', '0.015562', '0.021076', '3.9E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,224 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,224 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,224 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,224 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,224 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,224 DEBUG Extracted row: {'chrom': '1', 'pos': 770562, 'ref': 'A', 'alt': 'T', 'b': -0.015562, 'se': 0.021076, 'nlog_pval': 0.408935393, 'alt_freq': 0.003359000000000001, 'n': None, 'dbsnpid': 'rs544671234', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,225 DEBUG Input row: ['1_770988_A_G', 'rs12029736', '1', '770988', 'A', 'G', '-9.31153e-05', 'NA', 'NA', 'NA', '0.5161519999999999', '11', 'rs12029736', '1', '770988', 'A', 'G', '0.483848', '9.31153e-05', '0.00234297', '9.8E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,225 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,225 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,225 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,225 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,225 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,225 DEBUG Extracted row: {'chrom': '1', 'pos': 770988, 'ref': 'A', 'alt': 'G', 'b': -9.31153e-05, 'se': 0.00234297, 'nlog_pval': 0.00877392431, 'alt_freq': 0.5161519999999999, 'n': None, 'dbsnpid': 'rs12029736', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,225 DEBUG Input row: ['1_775065_A_G', 'rs868068494', '1', '775065', 'A', 'G', '0.00166', 'NA', 'NA', 'NA', '0.0012010000000000076', '11', 'rs868068494', '1', '775065', 'A', 'G', '0.998799', '-0.00166', '0.0364088', '8.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,225 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,225 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,225 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,225 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,225 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,225 DEBUG Extracted row: {'chrom': '1', 'pos': 775065, 'ref': 'A', 'alt': 'G', 'b': 0.00166, 'se': 0.0364088, 'nlog_pval': 0.0655015488, 'alt_freq': 0.0012010000000000076, 'n': None, 'dbsnpid': 'rs868068494', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,226 DEBUG Input row: ['1_777712_G_A', 'rs4565649', '1', '777712', 'G', 'A', '0.00379622', 'NA', 'NA', 'NA', '0.0020769999999999955', '11', 'rs4565649', '1', '777712', 'G', 'A', '0.997923', '-0.00379622', '0.0250129', '9.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,226 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,226 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,226 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,226 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,226 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,226 DEBUG Extracted row: {'chrom': '1', 'pos': 777712, 'ref': 'G', 'alt': 'A', 'b': 0.00379622, 'se': 0.0250129, 'nlog_pval': 0.0409586077, 'alt_freq': 0.0020769999999999955, 'n': None, 'dbsnpid': 'rs4565649', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,227 DEBUG Input row: ['1_778897_C_A', 'rs138660747', '1', '778897', 'C', 'A', '-0.00506273', 'NA', 'NA', 'NA', '0.00748099999999996', '11', 'rs138660747', '1', '778897', 'C', 'A', '0.992519', '0.00506273', '0.014813', '6.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,227 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,227 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,227 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,227 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,227 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,227 DEBUG Extracted row: {'chrom': '1', 'pos': 778897, 'ref': 'C', 'alt': 'A', 'b': -0.00506273, 'se': 0.014813, 'nlog_pval': 0.180456064, 'alt_freq': 0.00748099999999996, 'n': None, 'dbsnpid': 'rs138660747', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,228 DEBUG Input row: ['1_779216_T_C', 'rs149887893', '1', '779216', 'T', 'C', '0.00440511', 'NA', 'NA', 'NA', '0.03289200000000003', '11', 'rs149887893', '1', '779216', 'T', 'C', '0.967108', '-0.00440511', '0.00592033', '5.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,228 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,228 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,228 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,229 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,229 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,229 DEBUG Extracted row: {'chrom': '1', 'pos': 779216, 'ref': 'T', 'alt': 'C', 'b': 0.00440511, 'se': 0.00592033, 'nlog_pval': 0.301029996, 'alt_freq': 0.03289200000000003, 'n': None, 'dbsnpid': 'rs149887893', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,230 DEBUG Input row: ['1_779825_C_G', 'rs141090730', '1', '779825', 'C', 'G', '0.0127063', 'NA', 'NA', 'NA', '0.0021569999999999645', '6', 'rs141090730', '1', '779825', 'C', 'G', '0.997843', '-0.0127063', '0.0246712', '6.4E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,230 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,230 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,230 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,230 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,230 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,230 DEBUG Extracted row: {'chrom': '1', 'pos': 779825, 'ref': 'C', 'alt': 'G', 'b': 0.0127063, 'se': 0.0246712, 'nlog_pval': 0.193820026, 'alt_freq': 0.0021569999999999645, 'n': None, 'dbsnpid': 'rs141090730', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,231 DEBUG Input row: ['1_779885_C_T', 'rs12184267', '1', '779885', 'C', 'T', '0.00305275', 'NA', 'NA', 'NA', '0.036497', '11', 'rs12184267', '1', '779885', 'C', 'T', '0.963503', '-0.00305275', '0.00537817', '6.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,231 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,231 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,231 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,231 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,231 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,231 DEBUG Extracted row: {'chrom': '1', 'pos': 779885, 'ref': 'C', 'alt': 'T', 'b': 0.00305275, 'se': 0.00537817, 'nlog_pval': 0.207608311, 'alt_freq': 0.036497, 'n': None, 'dbsnpid': 'rs12184267', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,232 DEBUG Input row: ['1_779987_A_G', 'rs12184277', '1', '779987', 'A', 'G', '0.00327943', 'NA', 'NA', 'NA', '0.03661099999999995', '11', 'rs12184277', '1', '779987', 'A', 'G', '0.963389', '-0.00327943', '0.00535798', '5.9E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,233 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,233 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,233 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,233 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,233 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,233 DEBUG Extracted row: {'chrom': '1', 'pos': 779987, 'ref': 'A', 'alt': 'G', 'b': 0.00327943, 'se': 0.00535798, 'nlog_pval': 0.229147988, 'alt_freq': 0.03661099999999995, 'n': None, 'dbsnpid': 'rs12184277', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,234 DEBUG Input row: ['1_782094_C_T', 'rs141784362', '1', '782094', 'C', 'T', '0.00993461', 'NA', 'NA', 'NA', '0.002075000000000049', '11', 'rs141784362', '1', '782094', 'C', 'T', '0.997925', '-0.00993461', '0.0250532', '7.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,234 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,234 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,234 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,234 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,234 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,234 DEBUG Extracted row: {'chrom': '1', 'pos': 782094, 'ref': 'C', 'alt': 'T', 'b': 0.00993461, 'se': 0.0250532, 'nlog_pval': 0.148741651, 'alt_freq': 0.002075000000000049, 'n': None, 'dbsnpid': 'rs141784362', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,235 DEBUG Input row: ['1_782105_C_A', 'rs12184279', '1', '782105', 'C', 'A', '0.00196271', 'NA', 'NA', 'NA', '0.03631200000000001', '11', 'rs12184279', '1', '782105', 'C', 'A', '0.963688', '-0.00196271', '0.00539639', '7.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,235 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,236 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,236 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,236 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,236 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,236 DEBUG Extracted row: {'chrom': '1', 'pos': 782105, 'ref': 'C', 'alt': 'A', 'b': 0.00196271, 'se': 0.00539639, 'nlog_pval': 0.113509275, 'alt_freq': 0.03631200000000001, 'n': None, 'dbsnpid': 'rs12184279', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,237 DEBUG Input row: ['1_782207_G_A', 'rs144155419', '1', '782207', 'G', 'A', '-0.000394592', 'NA', 'NA', 'NA', '0.016291000000000055', '11', 'rs144155419', '1', '782207', 'G', 'A', '0.983709', '0.000394592', '0.00833342', '9.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,237 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,237 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,237 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,237 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,237 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,237 DEBUG Extracted row: {'chrom': '1', 'pos': 782207, 'ref': 'G', 'alt': 'A', 'b': -0.000394592, 'se': 0.00833342, 'nlog_pval': 0.0457574906, 'alt_freq': 0.016291000000000055, 'n': None, 'dbsnpid': 'rs144155419', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,239 DEBUG Input row: ['1_782956_T_C', 'rs188996809', '1', '782956', 'T', 'C', '-0.0685362', 'NA', 'NA', 'NA', '0.001782999999999979', '11', 'rs188996809', '1', '782956', 'T', 'C', '0.998217', '0.0685362', '0.0337749', '3.9E-02', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,239 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,239 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,239 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,239 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,239 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,239 DEBUG Extracted row: {'chrom': '1', 'pos': 782956, 'ref': 'T', 'alt': 'C', 'b': -0.0685362, 'se': 0.0337749, 'nlog_pval': 1.40893539, 'alt_freq': 0.001782999999999979, 'n': None, 'dbsnpid': 'rs188996809', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,240 DEBUG Input row: ['1_783244_C_G', 'rs777092529', '1', '783244', 'C', 'G', '0.0129623', 'NA', 'NA', 'NA', '0.0013290000000000246', '6', 'rs777092529', '1', '783244', 'C', 'G', '0.998671', '-0.0129623', '0.0328774', '8.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,240 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,240 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,241 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,241 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,241 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,241 DEBUG Extracted row: {'chrom': '1', 'pos': 783244, 'ref': 'C', 'alt': 'G', 'b': 0.0129623, 'se': 0.0328774, 'nlog_pval': 0.096910013, 'alt_freq': 0.0013290000000000246, 'n': None, 'dbsnpid': 'rs777092529', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,242 DEBUG Input row: ['1_783245_T_G', 'rs762187552', '1', '783245', 'T', 'G', '0.0129623', 'NA', 'NA', 'NA', '0.0013290000000000246', '11', 'rs762187552', '1', '783245', 'T', 'G', '0.998671', '-0.0129623', '0.0328774', '8.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,242 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,242 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,242 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,242 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,242 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,242 DEBUG Extracted row: {'chrom': '1', 'pos': 783245, 'ref': 'T', 'alt': 'G', 'b': 0.0129623, 'se': 0.0328774, 'nlog_pval': 0.096910013, 'alt_freq': 0.0013290000000000246, 'n': None, 'dbsnpid': 'rs762187552', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,244 DEBUG Input row: ['1_785001_G_T', 'rs116801199', '1', '785001', 'G', 'T', '0.00271027', 'NA', 'NA', 'NA', '0.036846000000000045', '11', 'rs116801199', '1', '785001', 'G', 'T', '0.963154', '-0.00271027', '0.0053371', '6.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,244 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,244 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,244 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,244 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,244 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,244 DEBUG Extracted row: {'chrom': '1', 'pos': 785001, 'ref': 'G', 'alt': 'T', 'b': 0.00271027, 'se': 0.0053371, 'nlog_pval': 0.173925197, 'alt_freq': 0.036846000000000045, 'n': None, 'dbsnpid': 'rs116801199', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,245 DEBUG Input row: ['1_785203_G_A', 'rs551231909', '1', '785203', 'G', 'A', '0.0189869', 'NA', 'NA', 'NA', '0.0018569999999999975', '11', 'rs551231909', '1', '785203', 'G', 'A', '0.998143', '-0.0189869', '0.0269116', '4.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,246 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,246 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,246 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,246 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,246 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,246 DEBUG Extracted row: {'chrom': '1', 'pos': 785203, 'ref': 'G', 'alt': 'A', 'b': 0.0189869, 'se': 0.0269116, 'nlog_pval': 0.337242168, 'alt_freq': 0.0018569999999999975, 'n': None, 'dbsnpid': 'rs551231909', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,247 DEBUG Input row: ['1_785604_T_G', 'rs564367954', '1', '785604', 'T', 'G', '-0.00646293', 'NA', 'NA', 'NA', '0.001823000000000019', '11', 'rs564367954', '1', '785604', 'T', 'G', '0.998177', '0.00646293', '0.0283257', '5.8E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,247 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,247 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,247 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,247 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,247 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,247 DEBUG Extracted row: {'chrom': '1', 'pos': 785604, 'ref': 'T', 'alt': 'G', 'b': -0.00646293, 'se': 0.0283257, 'nlog_pval': 0.236572006, 'alt_freq': 0.001823000000000019, 'n': None, 'dbsnpid': 'rs564367954', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,249 DEBUG Input row: ['1_785910_G_C', 'rs12565286', '1', '785910', 'G', 'C', '0.00248814', 'NA', 'NA', 'NA', '0.03694200000000003', '6', 'rs12565286', '1', '785910', 'G', 'C', '0.963058', '-0.00248814', '0.00531869', '6.9E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,249 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,249 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,249 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,249 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,249 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,249 DEBUG Extracted row: {'chrom': '1', 'pos': 785910, 'ref': 'G', 'alt': 'C', 'b': 0.00248814, 'se': 0.00531869, 'nlog_pval': 0.161150909, 'alt_freq': 0.03694200000000003, 'n': None, 'dbsnpid': 'rs12565286', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,251 DEBUG Input row: ['1_787179_T_C', 'rs150361918', '1', '787179', 'T', 'C', '0.019395', 'NA', 'NA', 'NA', '0.00218700000000005', '11', 'rs150361918', '1', '787179', 'T', 'C', '0.997813', '-0.019395', '0.0247043', '4.4E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,251 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,251 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,251 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,251 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,251 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,251 DEBUG Extracted row: {'chrom': '1', 'pos': 787179, 'ref': 'T', 'alt': 'C', 'b': 0.019395, 'se': 0.0247043, 'nlog_pval': 0.356547324, 'alt_freq': 0.00218700000000005, 'n': None, 'dbsnpid': 'rs150361918', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,251 DEBUG Input row: ['1_787223_T_C', 'rs138029171', '1', '787223', 'T', 'C', '0.00596685', 'NA', 'NA', 'NA', '0.0018000000000000238', '11', 'rs138029171', '1', '787223', 'T', 'C', '0.9982', '-0.00596685', '0.0273064', '8.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,251 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,251 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,252 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Extracted row: {'chrom': '1', 'pos': 787223, 'ref': 'T', 'alt': 'C', 'b': 0.00596685, 'se': 0.0273064, 'nlog_pval': 0.0861861476, 'alt_freq': 0.0018000000000000238, 'n': None, 'dbsnpid': 'rs138029171', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,252 DEBUG Input row: ['1_787290_T_C', 'rs116030099', '1', '787290', 'T', 'C', '0.000662758', 'NA', 'NA', 'NA', '0.10120200000000001', '11', 'rs116030099', '1', '787290', 'T', 'C', '0.898798', '-0.000662758', '0.00386431', '9.5E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,252 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,252 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Extracted row: {'chrom': '1', 'pos': 787290, 'ref': 'T', 'alt': 'C', 'b': 0.000662758, 'se': 0.00386431, 'nlog_pval': 0.0222763947, 'alt_freq': 0.10120200000000001, 'n': None, 'dbsnpid': 'rs116030099', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,252 DEBUG Input row: ['1_787600_C_T', 'rs114222710', '1', '787600', 'C', 'T', '0.0153893', 'NA', 'NA', 'NA', '0.0021060000000000523', '11', 'rs114222710', '1', '787600', 'C', 'T', '0.997894', '-0.0153893', '0.0249691', '5.5E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,252 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,252 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,252 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,253 DEBUG Extracted row: {'chrom': '1', 'pos': 787600, 'ref': 'C', 'alt': 'T', 'b': 0.0153893, 'se': 0.0249691, 'nlog_pval': 0.259637311, 'alt_freq': 0.0021060000000000523, 'n': None, 'dbsnpid': 'rs114222710', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,253 DEBUG Input row: ['1_788511_G_C', 'rs2977670', '1', '788511', 'G', 'C', '-0.00196443', 'NA', 'NA', 'NA', '0.9594582', '6', 'rs2977670', '1', '788511', 'G', 'C', '0.0405418', '0.00196443', '0.00514891', '7.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,253 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,253 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,253 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,253 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,253 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,253 DEBUG Extracted row: {'chrom': '1', 'pos': 788511, 'ref': 'G', 'alt': 'C', 'b': -0.00196443, 'se': 0.00514891, 'nlog_pval': 0.119186408, 'alt_freq': 0.9594582, 'n': None, 'dbsnpid': 'rs2977670', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,253 DEBUG Input row: ['1_788538_G_A', 'rs144434834', '1', '788538', 'G', 'A', '0.00545723', 'NA', 'NA', 'NA', '0.002071000000000045', '11', 'rs144434834', '1', '788538', 'G', 'A', '0.997929', '-0.00545723', '0.0253088', '8.3E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,253 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,253 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,254 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,254 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,254 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,254 DEBUG Extracted row: {'chrom': '1', 'pos': 788538, 'ref': 'G', 'alt': 'A', 'b': 0.00545723, 'se': 0.0253088, 'nlog_pval': 0.0809219076, 'alt_freq': 0.002071000000000045, 'n': None, 'dbsnpid': 'rs144434834', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,254 DEBUG Input row: ['1_789469_C_A', 'rs12126395', '1', '789469', 'C', 'A', '0.00344836', 'NA', 'NA', 'NA', '0.03145600000000004', '11', 'rs12126395', '1', '789469', 'C', 'A', '0.968544', '-0.00344836', '0.00928821', '7.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,254 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,254 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,254 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,254 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,254 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,254 DEBUG Extracted row: {'chrom': '1', 'pos': 789469, 'ref': 'C', 'alt': 'A', 'b': 0.00344836, 'se': 0.00928821, 'nlog_pval': 0.113509275, 'alt_freq': 0.03145600000000004, 'n': None, 'dbsnpid': 'rs12126395', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,255 DEBUG Input row: ['1_789680_A_T', 'rs865924913', '1', '789680', 'A', 'T', '-0.00129569', 'NA', 'NA', 'NA', '0.05329399999999995', '6', 'rs865924913', '1', '789680', 'A', 'T', '0.946706', '0.00129569', '0.00738394', '9.4E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,255 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,255 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,255 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,255 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,255 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,255 DEBUG Extracted row: {'chrom': '1', 'pos': 789680, 'ref': 'A', 'alt': 'T', 'b': -0.00129569, 'se': 0.00738394, 'nlog_pval': 0.0268721464, 'alt_freq': 0.05329399999999995, 'n': None, 'dbsnpid': 'rs865924913', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,256 DEBUG Input row: ['1_790021_C_T', 'rs553642122', '1', '790021', 'C', 'T', '-0.000459573', 'NA', 'NA', 'NA', '0.009638999999999953', '11', 'rs553642122', '1', '790021', 'C', 'T', '0.990361', '0.000459573', '0.0124', '1.0E+00', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,256 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,256 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,256 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,256 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,256 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,256 DEBUG Extracted row: {'chrom': '1', 'pos': 790021, 'ref': 'C', 'alt': 'T', 'b': -0.000459573, 'se': 0.0124, 'nlog_pval': 0, 'alt_freq': 0.009638999999999953, 'n': None, 'dbsnpid': 'rs553642122', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,256 DEBUG Input row: ['1_791414_C_G', 'rs28454925', '1', '791414', 'C', 'G', '0.00195437', 'NA', 'NA', 'NA', '0.03646700000000003', '6', 'rs28454925', '1', '791414', 'C', 'G', '0.963533', '-0.00195437', '0.00535298', '7.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,257 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,257 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,257 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,257 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,257 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,257 DEBUG Extracted row: {'chrom': '1', 'pos': 791414, 'ref': 'C', 'alt': 'G', 'b': 0.00195437, 'se': 0.00535298, 'nlog_pval': 0.119186408, 'alt_freq': 0.03646700000000003, 'n': None, 'dbsnpid': 'rs28454925', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,258 DEBUG Input row: ['1_794252_C_T', 'rs116720794', '1', '794252', 'C', 'T', '0.000332074', 'NA', 'NA', 'NA', '0.036779000000000006', '11', 'rs116720794', '1', '794252', 'C', 'T', '0.963221', '-0.000332074', '0.00530417', '9.9E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,258 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,258 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,258 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,258 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,258 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,258 DEBUG Extracted row: {'chrom': '1', 'pos': 794252, 'ref': 'C', 'alt': 'T', 'b': 0.000332074, 'se': 0.00530417, 'nlog_pval': 0.0043648054, 'alt_freq': 0.036779000000000006, 'n': None, 'dbsnpid': 'rs116720794', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,259 DEBUG Input row: ['1_794299_C_G', 'rs4951859', '1', '794299', 'C', 'G', '0.00100253', 'NA', 'NA', 'NA', '0.843737', '6', 'rs4951859', '1', '794299', 'C', 'G', '0.156263', '-0.00100253', '0.00274692', '6.5E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,259 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,259 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,259 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,259 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,259 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,259 DEBUG Extracted row: {'chrom': '1', 'pos': 794299, 'ref': 'C', 'alt': 'G', 'b': 0.00100253, 'se': 0.00274692, 'nlog_pval': 0.187086643, 'alt_freq': 0.843737, 'n': None, 'dbsnpid': 'rs4951859', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,261 DEBUG Input row: ['1_794707_T_C', 'rs148120343', '1', '794707', 'T', 'C', '-0.00879462', 'NA', 'NA', 'NA', '0.055956000000000006', '11', 'rs148120343', '1', '794707', 'T', 'C', '0.944044', '0.00879462', '0.0044356', '5.4E-02', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,261 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,261 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,261 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,261 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,261 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,261 DEBUG Extracted row: {'chrom': '1', 'pos': 794707, 'ref': 'T', 'alt': 'C', 'b': -0.00879462, 'se': 0.0044356, 'nlog_pval': 1.26760624, 'alt_freq': 0.055956000000000006, 'n': None, 'dbsnpid': 'rs148120343', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,262 DEBUG Input row: ['1_795668_C_T', 'rs548444285', '1', '795668', 'C', 'T', '0.00925359', 'NA', 'NA', 'NA', '0.0020259999999999723', '11', 'rs548444285', '1', '795668', 'C', 'T', '0.997974', '-0.00925359', '0.0255576', '7.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,262 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,262 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,262 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,262 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,262 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,262 DEBUG Extracted row: {'chrom': '1', 'pos': 795668, 'ref': 'C', 'alt': 'T', 'b': 0.00925359, 'se': 0.0255576, 'nlog_pval': 0.142667504, 'alt_freq': 0.0020259999999999723, 'n': None, 'dbsnpid': 'rs548444285', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,264 DEBUG Input row: ['1_796073_G_A', 'rs186002080', '1', '796073', 'G', 'A', '0.00769275', 'NA', 'NA', 'NA', '0.015589999999999993', '11', 'rs186002080', '1', '796073', 'G', 'A', '0.98441', '-0.00769275', '0.010108', '4.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,264 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,264 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,264 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,264 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,264 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,264 DEBUG Extracted row: {'chrom': '1', 'pos': 796073, 'ref': 'G', 'alt': 'A', 'b': 0.00769275, 'se': 0.010108, 'nlog_pval': 0.327902142, 'alt_freq': 0.015589999999999993, 'n': None, 'dbsnpid': 'rs186002080', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,265 DEBUG Input row: ['1_796338_T_C', 'rs58276399', '1', '796338', 'T', 'C', '-0.00175197', 'NA', 'NA', 'NA', '0.12211799999999995', '11', 'rs58276399', '1', '796338', 'T', 'C', '0.877882', '0.00175197', '0.00300209', '5.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,265 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,265 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,265 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,265 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,266 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,266 DEBUG Extracted row: {'chrom': '1', 'pos': 796338, 'ref': 'T', 'alt': 'C', 'b': -0.00175197, 'se': 0.00300209, 'nlog_pval': 0.283996656, 'alt_freq': 0.12211799999999995, 'n': None, 'dbsnpid': 'rs58276399', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,267 DEBUG Input row: ['1_796740_T_C', 'rs114572157', '1', '796740', 'T', 'C', '0.00826874', 'NA', 'NA', 'NA', '0.0022159999999999958', '11', 'rs114572157', '1', '796740', 'T', 'C', '0.997784', '-0.00826874', '0.024383', '7.4E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,267 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,267 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,267 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,267 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,267 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,267 DEBUG Extracted row: {'chrom': '1', 'pos': 796740, 'ref': 'T', 'alt': 'C', 'b': 0.00826874, 'se': 0.024383, 'nlog_pval': 0.13076828, 'alt_freq': 0.0022159999999999958, 'n': None, 'dbsnpid': 'rs114572157', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,269 DEBUG Input row: ['1_797421_A_G', 'rs144022023', '1', '797421', 'A', 'G', '0.00844915', 'NA', 'NA', 'NA', '0.002194999999999947', '11', 'rs144022023', '1', '797421', 'A', 'G', '0.997805', '-0.00844915', '0.0246804', '7.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,269 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,269 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,269 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,269 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,269 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,269 DEBUG Extracted row: {'chrom': '1', 'pos': 797421, 'ref': 'A', 'alt': 'G', 'b': 0.00844915, 'se': 0.0246804, 'nlog_pval': 0.142667504, 'alt_freq': 0.002194999999999947, 'n': None, 'dbsnpid': 'rs144022023', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,270 DEBUG Input row: ['1_797609_C_T', 'rs369030935', '1', '797609', 'C', 'T', '-0.0133371', 'NA', 'NA', 'NA', '0.025765999999999956', '11', 'rs369030935', '1', '797609', 'C', 'T', '0.974234', '0.0133371', '0.00737017', '9.9E-02', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,270 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,270 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,270 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,270 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,271 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,271 DEBUG Extracted row: {'chrom': '1', 'pos': 797609, 'ref': 'C', 'alt': 'T', 'b': -0.0133371, 'se': 0.00737017, 'nlog_pval': 1.00436481, 'alt_freq': 0.025765999999999956, 'n': None, 'dbsnpid': 'rs369030935', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,272 DEBUG Input row: ['1_797633_T_C', 'rs4951860', '1', '797633', 'T', 'C', '0.0100284', 'NA', 'NA', 'NA', '0.00418099999999999', '11', 'rs4951860', '1', '797633', 'T', 'C', '0.995819', '-0.0100284', '0.0202144', '5.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,272 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,272 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,272 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,272 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,272 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,272 DEBUG Extracted row: {'chrom': '1', 'pos': 797633, 'ref': 'T', 'alt': 'C', 'b': 0.0100284, 'se': 0.0202144, 'nlog_pval': 0.251811973, 'alt_freq': 0.00418099999999999, 'n': None, 'dbsnpid': 'rs4951860', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,274 DEBUG Input row: ['1_798439_A_G', 'rs187923271', '1', '798439', 'A', 'G', '-0.0376006', 'NA', 'NA', 'NA', '0.003713999999999995', '11', 'rs187923271', '1', '798439', 'A', 'G', '0.996286', '0.0376006', '0.0204355', '8.1E-02', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,274 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,274 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,274 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,274 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,274 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,274 DEBUG Extracted row: {'chrom': '1', 'pos': 798439, 'ref': 'A', 'alt': 'G', 'b': -0.0376006, 'se': 0.0204355, 'nlog_pval': 1.09151498, 'alt_freq': 0.003713999999999995, 'n': None, 'dbsnpid': 'rs187923271', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,276 DEBUG Input row: ['1_798969_T_C', 'rs141242758', '1', '798969', 'T', 'C', '-0.00148994', 'NA', 'NA', 'NA', '0.12135799999999997', '11', 'rs141242758', '1', '798969', 'T', 'C', '0.878642', '0.00148994', '0.00300348', '5.7E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,276 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,276 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,276 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,276 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,276 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,276 DEBUG Extracted row: {'chrom': '1', 'pos': 798969, 'ref': 'T', 'alt': 'C', 'b': -0.00148994, 'se': 0.00300348, 'nlog_pval': 0.244125144, 'alt_freq': 0.12135799999999997, 'n': None, 'dbsnpid': 'rs141242758', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,277 DEBUG Input row: ['1_799003_G_A', 'rs144952147', '1', '799003', 'G', 'A', '0.00571208', 'NA', 'NA', 'NA', '0.0021809999999999885', '11', 'rs144952147', '1', '799003', 'G', 'A', '0.997819', '-0.00571208', '0.0247291', '8.3E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,278 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,278 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,278 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,278 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,278 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,278 DEBUG Extracted row: {'chrom': '1', 'pos': 799003, 'ref': 'G', 'alt': 'A', 'b': 0.00571208, 'se': 0.0247291, 'nlog_pval': 0.0809219076, 'alt_freq': 0.0021809999999999885, 'n': None, 'dbsnpid': 'rs144952147', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,279 DEBUG Input row: ['1_800450_C_T', 'rs377086198', '1', '800450', 'C', 'T', '-0.000417181', 'NA', 'NA', 'NA', '0.0019730000000000025', '11', 'rs377086198', '1', '800450', 'C', 'T', '0.998027', '0.000417181', '0.0269813', '9.9E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,279 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,279 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,279 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,279 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,279 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,280 DEBUG Extracted row: {'chrom': '1', 'pos': 800450, 'ref': 'C', 'alt': 'T', 'b': -0.000417181, 'se': 0.0269813, 'nlog_pval': 0.0043648054, 'alt_freq': 0.0019730000000000025, 'n': None, 'dbsnpid': 'rs377086198', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,281 DEBUG Input row: ['1_800806_G_A', 'rs147133636', '1', '800806', 'G', 'A', '0.0129793', 'NA', 'NA', 'NA', '0.0016810000000000436', '11', 'rs147133636', '1', '800806', 'G', 'A', '0.998319', '-0.0129793', '0.0270429', '6.3E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,281 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,281 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,281 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,281 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,282 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,282 DEBUG Extracted row: {'chrom': '1', 'pos': 800806, 'ref': 'G', 'alt': 'A', 'b': 0.0129793, 'se': 0.0270429, 'nlog_pval': 0.200659451, 'alt_freq': 0.0016810000000000436, 'n': None, 'dbsnpid': 'rs147133636', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,283 DEBUG Input row: ['1_800909_T_A', 'rs79010578', '1', '800909', 'T', 'A', '-0.001265', 'NA', 'NA', 'NA', '0.132231', '6', 'rs79010578', '1', '800909', 'T', 'A', '0.867769', '0.001265', '0.002959', '6.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,283 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,283 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,283 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,283 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,284 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,284 DEBUG Extracted row: {'chrom': '1', 'pos': 800909, 'ref': 'T', 'alt': 'A', 'b': -0.001265, 'se': 0.002959, 'nlog_pval': 0.207608311, 'alt_freq': 0.132231, 'n': None, 'dbsnpid': 'rs79010578', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,285 DEBUG Input row: ['1_801018_G_A', 'rs550139358', '1', '801018', 'G', 'A', '-0.0594592', 'NA', 'NA', 'NA', '0.0012339999999999574', '11', 'rs550139358', '1', '801018', 'G', 'A', '0.998766', '0.0594592', '0.0366057', '9.2E-02', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,285 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,285 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,285 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,286 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,286 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,286 DEBUG Extracted row: {'chrom': '1', 'pos': 801018, 'ref': 'G', 'alt': 'A', 'b': -0.0594592, 'se': 0.0366057, 'nlog_pval': 1.03621217, 'alt_freq': 0.0012339999999999574, 'n': None, 'dbsnpid': 'rs550139358', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,287 DEBUG Input row: ['1_801246_A_C', 'rs4040690', '1', '801246', 'A', 'C', '-0.000662523', 'NA', 'NA', 'NA', '0.0018770000000000175', '11', 'rs4040690', '1', '801246', 'A', 'C', '0.998123', '0.000662523', '0.0270472', '1.0E+00', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,287 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,287 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,287 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,288 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,288 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,288 DEBUG Extracted row: {'chrom': '1', 'pos': 801246, 'ref': 'A', 'alt': 'C', 'b': -0.000662523, 'se': 0.0270472, 'nlog_pval': 0, 'alt_freq': 0.0018770000000000175, 'n': None, 'dbsnpid': 'rs4040690', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,289 DEBUG Input row: ['1_801309_T_C', 'rs181876450', '1', '801309', 'T', 'C', '0.00174051', 'NA', 'NA', 'NA', '0.011136999999999952', '11', 'rs181876450', '1', '801309', 'T', 'C', '0.988863', '-0.00174051', '0.0107465', '9.9E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,289 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,289 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,290 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,290 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,290 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,290 DEBUG Extracted row: {'chrom': '1', 'pos': 801309, 'ref': 'T', 'alt': 'C', 'b': 0.00174051, 'se': 0.0107465, 'nlog_pval': 0.0043648054, 'alt_freq': 0.011136999999999952, 'n': None, 'dbsnpid': 'rs181876450', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,291 DEBUG Input row: ['1_803030_C_T', 'rs183240359', '1', '803030', 'C', 'T', '0.0148938', 'NA', 'NA', 'NA', '0.003269999999999995', '11', 'rs183240359', '1', '803030', 'C', 'T', '0.99673', '-0.0148938', '0.021042', '4.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,291 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,292 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Extracted row: {'chrom': '1', 'pos': 803030, 'ref': 'C', 'alt': 'T', 'b': 0.0148938, 'se': 0.021042, 'nlog_pval': 0.387216143, 'alt_freq': 0.003269999999999995, 'n': None, 'dbsnpid': 'rs183240359', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,292 DEBUG Input row: ['1_803159_T_C', 'rs147999235', '1', '803159', 'T', 'C', '0.0125039', 'NA', 'NA', 'NA', '0.0020839999999999748', '11', 'rs147999235', '1', '803159', 'T', 'C', '0.997916', '-0.0125039', '0.0247723', '6.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,292 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,292 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Extracted row: {'chrom': '1', 'pos': 803159, 'ref': 'T', 'alt': 'C', 'b': 0.0125039, 'se': 0.0247723, 'nlog_pval': 0.207608311, 'alt_freq': 0.0020839999999999748, 'n': None, 'dbsnpid': 'rs147999235', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,292 DEBUG Input row: ['1_804904_C_T', 'rs61770167', '1', '804904', 'C', 'T', '0.0183979', 'NA', 'NA', 'NA', '0.005713999999999997', '11', 'rs61770167', '1', '804904', 'C', 'T', '0.994286', '-0.0183979', '0.0138583', '2.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,292 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,292 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,292 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,293 DEBUG Extracted row: {'chrom': '1', 'pos': 804904, 'ref': 'C', 'alt': 'T', 'b': 0.0183979, 'se': 0.0138583, 'nlog_pval': 0.698970004, 'alt_freq': 0.005713999999999997, 'n': None, 'dbsnpid': 'rs61770167', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,293 DEBUG Input row: ['1_805586_T_G', 'rs555377056', '1', '805586', 'T', 'G', '0.0133666', 'NA', 'NA', 'NA', '0.0018120000000000358', '11', 'rs555377056', '1', '805586', 'T', 'G', '0.998188', '-0.0133666', '0.0260119', '6.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,293 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,293 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,293 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,293 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,293 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,293 DEBUG Extracted row: {'chrom': '1', 'pos': 805586, 'ref': 'T', 'alt': 'G', 'b': 0.0133666, 'se': 0.0260119, 'nlog_pval': 0.207608311, 'alt_freq': 0.0018120000000000358, 'n': None, 'dbsnpid': 'rs555377056', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,294 DEBUG Input row: ['1_806364_G_A', 'rs2519060', '1', '806364', 'G', 'A', '0.00879305', 'NA', 'NA', 'NA', '0.002793999999999963', '11', 'rs2519060', '1', '806364', 'G', 'A', '0.997206', '-0.00879305', '0.0239116', '8.2E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,294 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,294 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,294 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,294 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,294 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,294 DEBUG Extracted row: {'chrom': '1', 'pos': 806364, 'ref': 'G', 'alt': 'A', 'b': 0.00879305, 'se': 0.0239116, 'nlog_pval': 0.0861861476, 'alt_freq': 0.002793999999999963, 'n': None, 'dbsnpid': 'rs2519060', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,294 DEBUG Input row: ['1_806453_C_T', 'rs148581628', '1', '806453', 'C', 'T', '0.00975454', 'NA', 'NA', 'NA', '0.0020099999999999563', '11', 'rs148581628', '1', '806453', 'C', 'T', '0.99799', '-0.00975454', '0.0246041', '7.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,294 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,294 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,294 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,294 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,294 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,294 DEBUG Extracted row: {'chrom': '1', 'pos': 806453, 'ref': 'C', 'alt': 'T', 'b': 0.00975454, 'se': 0.0246041, 'nlog_pval': 0.15490196, 'alt_freq': 0.0020099999999999563, 'n': None, 'dbsnpid': 'rs148581628', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,295 DEBUG Input row: ['1_807214_C_T', 'rs551006412', '1', '807214', 'C', 'T', '0.0324048', 'NA', 'NA', 'NA', '0.0017179999999999973', '11', 'rs551006412', '1', '807214', 'C', 'T', '0.998282', '-0.0324048', '0.0286997', '2.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,295 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,295 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,295 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,295 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,295 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,295 DEBUG Extracted row: {'chrom': '1', 'pos': 807214, 'ref': 'C', 'alt': 'T', 'b': 0.0324048, 'se': 0.0286997, 'nlog_pval': 0.677780705, 'alt_freq': 0.0017179999999999973, 'n': None, 'dbsnpid': 'rs551006412', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,296 DEBUG Input row: ['1_807433_C_T', 'rs112573343', '1', '807433', 'C', 'T', '0.0129646', 'NA', 'NA', 'NA', '0.0021079999999999988', '11', 'rs112573343', '1', '807433', 'C', 'T', '0.997892', '-0.0129646', '0.0243853', '5.6E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,296 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,296 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,296 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,296 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,296 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,296 DEBUG Extracted row: {'chrom': '1', 'pos': 807433, 'ref': 'C', 'alt': 'T', 'b': 0.0129646, 'se': 0.0243853, 'nlog_pval': 0.251811973, 'alt_freq': 0.0021079999999999988, 'n': None, 'dbsnpid': 'rs112573343', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,296 DEBUG Input row: ['1_807777_T_C', 'rs563230844', '1', '807777', 'T', 'C', '0.0366524', 'NA', 'NA', 'NA', '0.001350999999999991', '11', 'rs563230844', '1', '807777', 'T', 'C', '0.998649', '-0.0366524', '0.0324883', '2.3E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,297 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,297 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,297 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,297 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,297 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,297 DEBUG Extracted row: {'chrom': '1', 'pos': 807777, 'ref': 'T', 'alt': 'C', 'b': 0.0366524, 'se': 0.0324883, 'nlog_pval': 0.638272164, 'alt_freq': 0.001350999999999991, 'n': None, 'dbsnpid': 'rs563230844', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,297 DEBUG Input row: ['1_810097_C_T', 'rs546292184', '1', '810097', 'C', 'T', '-0.043156', 'NA', 'NA', 'NA', '0.0022410000000000485', '11', 'rs546292184', '1', '810097', 'C', 'T', '0.997759', '0.043156', '0.0313464', '1.5E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,297 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,297 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,297 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,298 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,298 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,298 DEBUG Extracted row: {'chrom': '1', 'pos': 810097, 'ref': 'C', 'alt': 'T', 'b': -0.043156, 'se': 0.0313464, 'nlog_pval': 0.823908741, 'alt_freq': 0.0022410000000000485, 'n': None, 'dbsnpid': 'rs546292184', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,298 DEBUG Input row: ['1_812760_T_C', 'rs559110724', '1', '812760', 'T', 'C', '0.024899', 'NA', 'NA', 'NA', '0.0024530000000000385', '11', 'rs559110724', '1', '812760', 'T', 'C', '0.997547', '-0.024899', '0.0280483', '4.0E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,298 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,298 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,299 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,299 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,299 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,299 DEBUG Extracted row: {'chrom': '1', 'pos': 812760, 'ref': 'T', 'alt': 'C', 'b': 0.024899, 'se': 0.0280483, 'nlog_pval': 0.397940009, 'alt_freq': 0.0024530000000000385, 'n': None, 'dbsnpid': 'rs559110724', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,300 DEBUG Input row: ['1_813144_C_T', 'rs144265613', '1', '813144', 'C', 'T', '-0.0382841', 'NA', 'NA', 'NA', '0.0020320000000000338', '11', 'rs144265613', '1', '813144', 'C', 'T', '0.997968', '0.0382841', '0.0319453', '2.4E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,300 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,300 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,300 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,300 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,300 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,300 DEBUG Extracted row: {'chrom': '1', 'pos': 813144, 'ref': 'C', 'alt': 'T', 'b': -0.0382841, 'se': 0.0319453, 'nlog_pval': 0.619788758, 'alt_freq': 0.0020320000000000338, 'n': None, 'dbsnpid': 'rs144265613', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,301 DEBUG Input row: ['1_817098_G_A', 'rs146277091', '1', '817098', 'G', 'A', '0.00156501', 'NA', 'NA', 'NA', '0.03669800000000001', '11', 'rs146277091', '1', '817098', 'G', 'A', '0.963302', '-0.00156501', '0.00525018', '7.9E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,301 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,301 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,301 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,301 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,301 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,301 DEBUG Extracted row: {'chrom': '1', 'pos': 817098, 'ref': 'G', 'alt': 'A', 'b': 0.00156501, 'se': 0.00525018, 'nlog_pval': 0.102372909, 'alt_freq': 0.03669800000000001, 'n': None, 'dbsnpid': 'rs146277091', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,302 DEBUG Input row: ['1_817186_G_A', 'rs3094315', '1', '817186', 'G', 'A', '0.00103711', 'NA', 'NA', 'NA', '0.839433', '11', 'rs3094315', '1', '817186', 'G', 'A', '0.160567', '-0.00103711', '0.00265924', '6.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,302 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,302 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,302 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,302 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,303 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,303 DEBUG Extracted row: {'chrom': '1', 'pos': 817186, 'ref': 'G', 'alt': 'A', 'b': 0.00103711, 'se': 0.00265924, 'nlog_pval': 0.214670165, 'alt_freq': 0.839433, 'n': None, 'dbsnpid': 'rs3094315', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,304 DEBUG Input row: ['1_817341_A_G', 'rs3131972', '1', '817341', 'A', 'G', '0.00138153', 'NA', 'NA', 'NA', '0.839114', '11', 'rs3131972', '1', '817341', 'A', 'G', '0.160886', '-0.00138153', '0.00265722', '5.1E-01', '457824', 'NA', 'NA', 'NA']
+2025-08-27 12:59:50,304 DEBUG Could not parse number of cases: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,304 DEBUG Could not parse number of controls: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,304 DEBUG Could not sum cases and controls: unsupported operand type(s) for +: 'NoneType' and 'NoneType'
+2025-08-27 12:59:50,304 DEBUG Could not parse imputation INFO: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,304 DEBUG Could not parse imputation Z score: list indices must be integers or slices, not NoneType
+2025-08-27 12:59:50,304 DEBUG Extracted row: {'chrom': '1', 'pos': 817341, 'ref': 'A', 'alt': 'G', 'b': 0.00138153, 'se': 0.00265722, 'nlog_pval': 0.292429824, 'alt_freq': 0.839114, 'n': None, 'dbsnpid': 'rs3131972', 'ncase': None, 'imp_info': None, 'imp_z': None, 'vcf_filter': 'PASS'}
+2025-08-27 12:59:50,305 INFO Total variants: 100
+2025-08-27 12:59:50,305 INFO Variants could not be read: 0
+2025-08-27 12:59:50,305 INFO Variants harmonised: 100
+2025-08-27 12:59:50,306 INFO Variants discarded during harmonisation: 0
+2025-08-27 12:59:50,306 INFO Alleles switched: 0
+2025-08-27 12:59:50,306 INFO Normalised variants: 0
+2025-08-27 12:59:50,306 INFO Skipped 0 of 100
+2025-08-27 12:59:50,312 INFO Writing headers to BCF/VCF: /user/home/xd14188/repo/gwas2vcf/test/test_v38_withDBsnp/test.vcf.gz
+2025-08-27 12:59:50,317 INFO Writing variants to BCF/VCF: /user/home/xd14188/repo/gwas2vcf/test/test_v38_withDBsnp/test.vcf.gz
+2025-08-27 12:59:50,326 INFO Indexing output file

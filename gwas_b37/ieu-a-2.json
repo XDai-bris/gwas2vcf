@@ -1,0 +1,23 @@
+{
+  "id": "ieu-a-2",
+  "pmid": "25673413",
+  "year": "2015",
+  "mr": 1,
+  "note": "NULL",
+  "trait": "Body mass index",
+  "category": "Risk factor",
+  "subcategory": "Anthropometric",
+  "population": "Mixed",
+  "sex": "Males and females",
+  "ncase": "NULL",
+  "ncontrol": "NULL",
+  "sample_size": "339224",
+  "nsnp": 2555511,
+  "units": "SD (kg/m^2)",
+  "sd": "4.77",
+  "priority": "1",
+  "author": "Locke AE",
+  "consortium": "GIANT",
+  "group_name": "public",
+  "build": "HG19/GRCh37"
+}

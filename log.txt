@@ -1,0 +1,30 @@
+hg37 test with and without dbsnp 
+input gwas file: gwas_b37/All_ancestries_SNP_gwas_mc_merge_nogc.tbl.uniq.gz.tab.gz
+input ref file: ref/human_g1k_v37.fasta
+input dbsnp file: ref/dbsnp.v153.b37.vcf.gz
+input alias file when dbsnp involved: ref/alias-b37.txt
+
+running time without dbsnp: 12 min 36 sec
+running time with dbsnp: 49 min 54 sec
+
+hg38 test with and without dbsnp
+input gwas file: gwas_b38/29892013-GCST90029007-EFO_0004340.h.tsv.gz
+input ref file: ref/hg38.fa
+input dbsnp file: ref/dbsnp.v153.hg38.numeric.vcf.gz
+no alias file needed as dbsnp file has been modified chr_to numeric before usage
+
+running time without dbsnp: 33 min 51 sec
+running time with dbsnp: 
+
+note: the chr format (1/chr1) needed to be same in GWAS, reference .fa(.fai) file and dbsnp file.
+Checking with: cut -f1 "${RefGenomeFile}.fai" | head and 
+bcftools view -h "/user/home/.../dbsnp.v153.hg38.vcf.gz" | grep -o '##contig=<ID=[^,]*' | head
+the --alisa {$alisa_file} only to map your GWAS summary stats chromosome name to another string
+so if the .fai and dbsnp files are in different chr format, there is preparation work needed.
+here I chose to change the dbsnp.v153.hg38.vcf.gz file with chr_to numeric.map with 
+
+bcftools annotate --rename-chrs chr_to_numeric.map \
+  -Oz -o ./dbsnp.v153.hg38.numeric.vcf.gz  ./dbsnp.v153.hg38.vcf.gz
+
+tabix -p vcf ./dbsnp.v153.hg38.numeric.vcf.gz
+bcftools index -s ../ref/dbsnp.v153.hg38.numeric.vcf.gz | head

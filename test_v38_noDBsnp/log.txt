@@ -1,0 +1,19 @@
+(gwas2vcf-py37) [xd14188@compute098(BlueCrystal4) test_v38_noDBsnp]$ sh scr.sh 
+2025-08-20 16:28:19,772 INFO Gwas2VCF 1.4.3
+2025-08-20 16:28:19,772 INFO Arguments: {'out': '/user/home/xd14188/repo/gwas2vcf/test/test_v38_noDBsnp/test.vcf.gz', 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b38/29892013-GCST90029007-EFO_0004340.h.tsv.gz', 'ref': '/user/home/xd14188/repo/gwas2vcf/test/ref/hg38.fa', 'dbsnp': None, 'json': '/user/home/xd14188/repo/gwas2vcf/test/test_v38_noDBsnp/test_param.json', 'id': 'test_v38_noDBsnp', 'cohort_controls': None, 'cohort_cases': None, 'csi': False, 'log': 'INFO', 'alias': None}
+2025-08-20 16:28:19,772 INFO Reading JSON parameters
+2025-08-20 16:28:19,774 INFO Parameters: {'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b38/29892013-GCST90029007-EFO_0004340.h.tsv.gz', 'delimiter': '\t', 'id': 'test', 'eaf_col': 10, 'beta_col': 6, 'out': '/user/home/xd14188/repo/gwas2vcf/test_v38_noDBsnp/test.vcf.gz', 'build': 'GRCh38', 'se_col': 19, 'header': True, 'pval_col': 20, 'chr_col': 2, 'snp_col': 1, 'oa_col': 4, 'ea_col': 5, 'pos_col': 3}
+2025-08-20 16:28:19,774 INFO Checking input arguments
+2025-08-20 16:28:19,775 INFO Reading summary stats and mapping to FASTA: /user/home/xd14188/repo/gwas2vcf/test/gwas_b38/29892013-GCST90029007-EFO_0004340.h.tsv.gz
+2025-08-20 16:28:19,775 INFO Reading gzip file
+2025-08-20 16:28:19,779 INFO Skipping header: hm_variant_id     hm_rsid hm_chrom        hm_pos  hm_other_allele hm_effect_allele hm_beta hm_odds_ratio   hm_ci_lower     hm_ci_upper     hm_effect_allele_frequency      hm_code variant_id      chromosome       base_pair_location      effect_allele   other_allele    effect_allele_frequency beta    standard_error  p_value  n       odds_ratio      ci_lower        ci_upper
+2025-08-20 16:46:39,735 INFO Total variants: 12004130
+2025-08-20 16:46:39,735 INFO Variants could not be read: 26922
+2025-08-20 16:46:39,735 INFO Variants harmonised: 11977206
+2025-08-20 16:46:39,735 INFO Variants discarded during harmonisation: 2
+2025-08-20 16:46:39,735 INFO Alleles switched: 1
+2025-08-20 16:46:39,735 INFO Normalised variants: 0
+2025-08-20 16:46:39,735 INFO Skipped 26924 of 12004130
+2025-08-20 16:46:39,736 INFO Writing headers to BCF/VCF: /user/home/xd14188/repo/gwas2vcf/test/test_v38_noDBsnp/test.vcf.gz
+2025-08-20 16:46:39,740 INFO Writing variants to BCF/VCF: /user/home/xd14188/repo/gwas2vcf/test/test_v38_noDBsnp/test.vcf.gz
+2025-08-20 17:02:10,049 INFO Indexing output file

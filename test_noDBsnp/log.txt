@@ -1,0 +1,21 @@
+(gwas2vcf-py37) [xd14188@bc4login2(BlueCrystal4) test_noDBsnp]$ sh scr.sh 
+2025-08-19 14:56:57,413 INFO Gwas2VCF 1.4.3
+2025-08-19 14:56:57,413 INFO Arguments: {'out': '/user/home/xd14188/repo/gwas2vcf/test/test_noDBsnp/test.vcf.gz', 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b37/All_ancestries_SNP_gwas_mc_merge_nogc.tbl.uniq.gz.tab.gz', 'ref': '/user/home/xd14188/repo/gwas2vcf/test/ref/human_g1k_v37.fasta', 'dbsnp': None, 'json': '/user/home/xd14188/repo/gwas2vcf/test/test_noDBsnp/test_param.json', 'id': 'test_noDBsnp', 'cohort_controls': None, 'cohort_cases': None, 'csi': False, 'log': 'INFO', 'alias': None}
+2025-08-19 14:56:57,413 INFO Reading JSON parameters
+2025-08-19 14:56:57,414 INFO Parameters: {'jsonmeta': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b37/ieu-a-2.json', 'pos_col': 11, 'oa_col': 2, 'chr_col': 10, 'beta_col': 3, 'id': 'test', 'header': True, 'build': 'HG19/GRCh37', 'snp_col': 0, 'out': '/user/home/xd14188/repo/gwas2vcf/test/test_noDBsnp/test.vcf.gz', 'pval_col': 5, 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b37/All_ancestries_SNP_gwas_mc_merge_nogc.tbl.uniq.gz.tab.gz', 'eaf_col': 6, 'ncontrol_col': 7, 'delimiter': ' ', 'se_col': 4, 'ea_col': 1}
+2025-08-19 14:56:57,414 INFO Checking input arguments
+2025-08-19 14:56:57,558 INFO Reading summary stats and mapping to FASTA: /user/home/xd14188/repo/gwas2vcf/test/gwas_b37/All_ancestries_SNP_gwas_mc_merge_nogc.tbl.uniq.gz.tab.gz
+2025-08-19 14:56:57,558 INFO Reading gzip file
+2025-08-19 14:56:57,634 INFO Skipping header: ID ALT REF BETA SE PVALUE AF N ZVALUE INFO CHROM POS
+2025-08-19 15:05:48,753 INFO Total variants: 2554285
+2025-08-19 15:05:48,753 INFO Variants could not be read: 0
+2025-08-19 15:05:48,753 INFO Variants harmonised: 2554285
+2025-08-19 15:05:48,753 INFO Variants discarded during harmonisation: 0
+2025-08-19 15:05:48,753 INFO Alleles switched: 0
+2025-08-19 15:05:48,753 INFO Normalised variants: 0
+2025-08-19 15:05:48,753 INFO Skipped 0 of 2554285
+2025-08-19 15:05:48,754 INFO Writing headers to BCF/VCF: /user/home/xd14188/repo/gwas2vcf/test/test_noDBsnp/test.vcf.gz
+2025-08-19 15:05:48,801 INFO Writing variants to BCF/VCF: /user/home/xd14188/repo/gwas2vcf/test/test_noDBsnp/test.vcf.gz
+2025-08-19 15:09:33,619 INFO Indexing output file
+(gwas2vcf-py37) [xd14188@bc4login2(BlueCrystal4) test_noDBsnp]$ ls
+scr.sh  test.vcf.gz  test.vcf.gz.tbi  test_param.json

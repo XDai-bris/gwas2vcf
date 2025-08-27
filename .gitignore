@@ -1,0 +1,6 @@
+*.gz
+*.gz.tbi
+*.fa
+*.fa.fai
+*.fasta
+*.fasta.fai

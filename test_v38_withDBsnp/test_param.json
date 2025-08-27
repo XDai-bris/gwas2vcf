@@ -1,0 +1,17 @@
+{
+  "id": "test",
+  "build": "GRCh38",
+  "chr_col": 2,
+  "snp_col": 1,
+  "pos_col": 3,
+  "ea_col": 5,
+  "oa_col": 4,
+  "eaf_col": 10,
+  "beta_col": 6,
+  "se_col": 19,
+  "pval_col": 20,
+  "delimiter": "\t",
+  "header": true,
+  "data": "/user/home/xd14188/repo/gwas2vcf/test/gwas_b38/29892013-GCST90029007-EFO_0004340.h.tsv.gz",
+  "out": "/user/home/xd14188/repo/gwas2vcf/test_v38_withDBsnp/test.vcf.gz"
+}

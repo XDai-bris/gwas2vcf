@@ -1,0 +1,10 @@
+/tmp/slurmd/job12547896/slurm_script: line 12: mamba: command not found
+/user/work/xd14188/miniforge3/envs/gwas2vcf-py37/bin/python3
+2025-08-27 15:35:11,388 INFO Gwas2VCF 1.4.3
+2025-08-27 15:35:11,388 INFO Arguments: {'out': '/user/home/xd14188/repo/gwas2vcf/test/test_v38_withDBsnp/test.vcf.gz', 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b38/29892013-GCST90029007-EFO_0004340.h.tsv.gz', 'ref': '/user/home/xd14188/repo/gwas2vcf/test/ref/hg38.fa', 'dbsnp': '/user/home/xd14188/repo/gwas2vcf/test/ref/dbsnp.v153.hg38.numeric.vcf.gz', 'json': '/user/home/xd14188/repo/gwas2vcf/test/test_v38_withDBsnp/test_param.json', 'id': 'test_v38_withDBsnp', 'cohort_controls': None, 'cohort_cases': None, 'csi': False, 'log': 'INFO', 'alias': None}
+2025-08-27 15:35:11,388 INFO Reading JSON parameters
+2025-08-27 15:35:11,390 INFO Parameters: {'build': 'GRCh38', 'delimiter': '\t', 'out': '/user/home/xd14188/repo/gwas2vcf/test_v38_withDBsnp/test.vcf.gz', 'pos_col': 3, 'snp_col': 1, 'data': '/user/home/xd14188/repo/gwas2vcf/test/gwas_b38/29892013-GCST90029007-EFO_0004340.h.tsv.gz', 'pval_col': 20, 'oa_col': 4, 'id': 'test', 'ea_col': 5, 'chr_col': 2, 'se_col': 19, 'beta_col': 6, 'header': True, 'eaf_col': 10}
+2025-08-27 15:35:11,390 INFO Checking input arguments
+2025-08-27 15:35:11,536 INFO Reading summary stats and mapping to FASTA: /user/home/xd14188/repo/gwas2vcf/test/gwas_b38/29892013-GCST90029007-EFO_0004340.h.tsv.gz
+2025-08-27 15:35:11,536 INFO Reading gzip file
+2025-08-27 15:35:11,539 INFO Skipping header: hm_variant_id	hm_rsid	hm_chrom	hm_pos	hm_other_allele	hm_effect_allele	hm_beta	hm_odds_ratio	hm_ci_lower	hm_ci_upper	hm_effect_allele_frequency	hm_code	variant_id	chromosome	base_pair_location	effect_allele	other_allele	effect_allele_frequency	beta	standard_error	p_value	n	odds_ratio	ci_lower	ci_upper
