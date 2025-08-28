@@ -1,6 +1,6 @@
 # GWAS Liftover Benchmark with and without dbSNP
 
-This repository documents tests of GWAS summary statistics alignment against human reference genomes (**hg19/GRCh37** and **hg38/GRCh38**) with and without **dbSNP annotation**.  
+This repository documents tests of Gwas2Vcf tools applying to hg38 GWAS summary statistics alignment against different human reference genomes (**hg19/GRCh37** and **hg38/GRCh38**) with and without **dbSNP annotation**.  
 The purpose is to measure runtime differences and outline preprocessing steps required for chromosome format consistency.
 
 ---
@@ -28,7 +28,7 @@ The purpose is to measure runtime differences and outline preprocessing steps re
 | hg19 / GRCh37 | ❌ No  | 12 min 36 sec |
 | hg19 / GRCh37 | ✅ Yes | 49 min 54 sec |
 | hg38 / GRCh38 | ❌ No  | 33 min 51 sec |
-| hg38 / GRCh38 | ✅ Yes | (pending) |
+| hg38 / GRCh38 | ✅ Yes |197 min 18 sec |
 
 ---
 
@@ -66,7 +66,7 @@ tabix -p vcf ./dbsnp.v153.hg38.numeric.vcf.gz
 bcftools index -s ./ref/dbsnp.v153.hg38.numeric.vcf.gz | head
 ```
 
-The `--alias {alias_file}` option can only be used to remap chromosome names in GWAS summary statistics.
+The `--alias {alias_file}` option can be used to remap chromosome names in GWAS summary statistics.
 
 ---
 
